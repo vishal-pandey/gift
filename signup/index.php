@@ -9,8 +9,8 @@
 		$email = $obj->email;
 		$password = $obj->password;
 
-		$sql1 = "selecr * from user where mobile = '{$mobile}'";
-		$sql2 = "selecr * from user where email = '{$email}'";
+		$sql1 = "select * from user where mobile = '{$mobile}'";
+		$sql2 = "select * from user where email = '{$email}'";
 
 		$result1 = $conn->query($sql1);
 		$result2 = $conn->query($sql2);
