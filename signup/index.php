@@ -22,6 +22,8 @@
 		}else{
 			$sql = "insert into user (id, name, mobile, email, password) VALUES ('{$id}','{$name}','{$mobile}','{$email}','{$password}')";
 			if($conn->query($sql)){
+				echo $sql1;
+				echo $sql2;
 				echo "success";
 			}
 		}
