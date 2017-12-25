@@ -8,9 +8,22 @@
 		$mobile = $obj->mobile;
 		$email = $obj->email;
 		$password = $obj->password;
-		$sql = "insert into user (id, name, mobile, email, password) VALUES ('{$id}','{$name}','{$mobile}','{$email}','{$password}')";
-		if($conn->query($sql)){
-			echo "success";
+
+		$sql1 = "selecr * from user where mobile = '{$mobile}'";
+		$sql2 = "selecr * from user where email = '{$email}'";
+
+		$result1 = $conn->query($sql1);
+		$result2 = $conn->query($sql2);
+
+		if ($result1->num_rows >0) {
+			echo "This mobile is already registered";
+		}else if ($result2->num_rows >0) {
+			echo "This email is already registered";
+		}else{
+			$sql = "insert into user (id, name, mobile, email, password) VALUES ('{$id}','{$name}','{$mobile}','{$email}','{$password}')";
+			if($conn->query($sql)){
+				echo "success";
+			}
 		}
 	}
 ?>
