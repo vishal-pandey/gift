@@ -7,5 +7,6 @@
 	// session_start();
 	echo $_POST['mobile'];
 	echo "string";
+	echo $_GET['mobile'];
 	echo $_POST['pwd'];
 ?>
