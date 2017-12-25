@@ -8,8 +8,8 @@
 	// header('Content-Type: application/json');
 	// $data = json_decode(file_get_contents("php://input"));
 	$data = file_get_contents("php://input");
-	$obh = json_decode($data);
-	echo $obh->mobile;
+	$obh = json_decode($data, TRUE);
+	echo $obh;
 	// echo $data['mobile'];
 	// echo "string";
 	// echo $data['pwd'];
