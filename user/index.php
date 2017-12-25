@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if (isset($_SESSION['user'])) {
-		echo "logged";
+		echo $_SESSION['user'];
 	}else{
 		echo "notlogged";
 	}

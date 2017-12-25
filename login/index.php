@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include '../config.php';
 	$json = file_get_contents("php://input");
 	if ($json) {
@@ -11,6 +12,7 @@
 			$row = $result->fetch_assoc();
 			if ($row['password'] == $password) {
 				echo "success";
+				$_SESSION['user'] = $row['name'];
 			}else{
 				echo "Password Do Not Match";
 			}
