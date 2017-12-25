@@ -1,1 +1,4 @@
-vishall
+{
+	name: "Vishla",
+	pwd: "password"
+}
