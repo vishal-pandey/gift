@@ -1,4 +1,6 @@
 <?php
+	$some_name = session_name("some_name");
+	session_set_cookie_params(0, '/', 'localhost');
 	session_start();
 	include '../config.php';
 	$json = file_get_contents("php://input");
