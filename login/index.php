@@ -4,7 +4,7 @@
 	header('Access-Control-Allow-Headers: *');
 ?>
 <?php
-	session_start();
+	// session_start();
 	echo $_POST['mobile'];
 	echo $_POST['pwd'];
 ?>
