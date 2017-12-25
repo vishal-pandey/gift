@@ -14,8 +14,10 @@
 
 		$result1 = $conn->query($sql1);
 		$result2 = $conn->query($sql2);
-
-		if ($result1->num_rows >0) {
+		if (strlen($mobile) != 10) {
+			echo "Enter a valid 10 digit mobile no";
+		}
+		else if ($result1->num_rows >0) {
 			echo "This mobile is already registered";
 		}else if ($result2->num_rows >0) {
 			echo "This email is already registered";
