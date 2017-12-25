@@ -8,6 +8,7 @@
 		$mobile = $obj->mobile;
 		$email = $obj->email;
 		$password = $obj->password;
+		$rpassword = $obj->rpassword;
 
 		$sql1 = "select * from user where mobile = '{$mobile}'";
 		$sql2 = "select * from user where email = '{$email}'";
@@ -21,6 +22,8 @@
 			echo "This mobile is already registered";
 		}else if ($result2->num_rows >0) {
 			echo "This email is already registered";
+		}else if($password != $rpassword){
+			echo "Password Do not match";
 		}else{
 			$sql = "insert into user (id, name, mobile, email, password) VALUES ('{$id}','{$name}','{$mobile}','{$email}','{$password}')";
 			if($conn->query($sql)){
