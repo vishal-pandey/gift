@@ -11,7 +11,11 @@
 			$row = $result->fetch_assoc();
 			if ($row['password'] == $password) {
 				echo "succes";
+			}else{
+				echo "Password Do Not Match";
 			}
+		}else{
+			echo "InValid User Name";
 		}
 		// if ($obj->mobile == "9717130893" && $obj->pwd == "Vishal@123") {
 		// 	echo "success";
