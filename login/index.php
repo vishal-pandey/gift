@@ -1,6 +1,6 @@
 <?php
 	$some_name = session_name("some_name");
-	session_set_cookie_params(0, '/', 'localhost');
+	session_set_cookie_params(0, '/', 'localhost:4200');
 	session_start();
 	include '../config.php';
 	$json = file_get_contents("php://input");
@@ -15,6 +15,7 @@
 			if ($row['password'] == $password) {
 				echo "success";
 				$_SESSION['user'] = $row['name'];
+				echo $_SESSION['user'];
 			}else{
 				echo "Password Do Not Match";
 			}
