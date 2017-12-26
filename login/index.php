@@ -13,7 +13,7 @@
 		if ($result->num_rows >0) {
 			$row = $result->fetch_assoc();
 			if ($row['password'] == $password) {
-				echo "success";
+				// echo "success";
 				$key = "Vishalisgre8";
 				$token = array(
 				    "name" => $row['name'],
