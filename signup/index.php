@@ -27,7 +27,7 @@
 		}else{
 			$sql = "insert into user (id, name, mobile, email, password) VALUES ('{$id}','{$name}','{$mobile}','{$email}','{$password}')";
 			if($conn->query($sql)){
-				$sql = "insert into cart values('{$id}', '{}')";
+				$sql = "insert into cart values('{$id}', '[]')";
 				if($conn->query($sql)){
 					echo "success";
 				}
