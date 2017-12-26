@@ -20,14 +20,18 @@
 				    "email" => $row['email'],
 				    "address" =>$row['address']
 				);
-				$jwt = JWT::encode($token, $key);
+					$jwt = JWT::encode($token, $key);
+
+				echo "{'key': 'success','value': '{$jwt}'}";
+
+
 				// $decoded = JWT::decode($jwt, $key, array('HS256'));
-				print_r($jwt);
+				// print_r($jwt);
 			}else{
-				echo "Password Do Not Match";
+				echo "{'key': 'Password Do Not match','value': 'null'}";
 			}
 		}else{
-			echo "InValid User Name";
+			echo "{'key': 'InValid UserName','value': 'null'}";
 		}
 	}
 ?>
