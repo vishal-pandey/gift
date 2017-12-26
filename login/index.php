@@ -22,16 +22,16 @@
 				);
 					$jwt = JWT::encode($token, $key);
 
-				echo "{'key': 'success','value': '{$jwt}'}";
+				echo "{key: 'success',value: '{$jwt}'}";
 
 
 				// $decoded = JWT::decode($jwt, $key, array('HS256'));
 				// print_r($jwt);
 			}else{
-				echo "{'key': 'Password Do Not match','value': 'null'}";
+				echo "{key: 'Password Do Not match','value': 'null'}";
 			}
 		}else{
-			echo "{'key': 'InValid UserName','value': 'null'}";
+			echo "{key: 'InValid UserName',value: 'null'}";
 		}
 	}
 ?>
