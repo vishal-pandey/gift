@@ -1,6 +1,6 @@
 <?php
 	use \Firebase\JWT\JWT;
-	require './vendor/autoload.php';
+	require '../vendor/autoload.php';
 	include '../config.php';
 	
 	$json = file_get_contents("php://input");
