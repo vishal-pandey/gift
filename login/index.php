@@ -19,7 +19,8 @@
 						"id" => $row['id'],
 				    "name" => $row['name'],
 				    "email" => $row['email'],
-				    "address" =>$row['address']
+				    "address" =>$row['address'],
+				    "mobile" =>$row['mobile'],
 				);
 					$jwt = JWT::encode($token, $key);
 
