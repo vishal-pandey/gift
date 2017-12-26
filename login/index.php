@@ -1,8 +1,8 @@
 <?php
-	$some_name = session_name("some_name");
-	session_set_cookie_params(0, '/', 'localhost:4200');
-	session_start();
+	use \Firebase\JWT\JWT;
+	require './vendor/autoload.php';
 	include '../config.php';
+	
 	$json = file_get_contents("php://input");
 	if ($json) {
 		$obj = json_decode($json);
@@ -14,19 +14,20 @@
 			$row = $result->fetch_assoc();
 			if ($row['password'] == $password) {
 				echo "success";
-				$_SESSION['user'] = $row['name'];
-				echo $_SESSION['user'];
+				$key = "Vishalisgre8";
+				$token = array(
+				    "name" => $row['name'],
+				    "email" => $row['email'],
+				    "address" =>$row['address']
+				);
+				$jwt = JWT::encode($token, $key);
+				// $decoded = JWT::decode($jwt, $key, array('HS256'));
+				print_r($jwt);
 			}else{
 				echo "Password Do Not Match";
 			}
 		}else{
 			echo "InValid User Name";
 		}
-		// if ($obj->mobile == "9717130893" && $obj->pwd == "Vishal@123") {
-		// 	echo "success";
-		// }else{
-		// 	echo "fail";
-		// }
 	}
-	
 ?>
