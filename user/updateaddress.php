@@ -12,7 +12,7 @@
 		$decoded = JWT::decode($jwt, $key, array('HS256'));
 		$uid = $decoded->id;
 		$address = $obj->address;
-		$sql = "update user set address = '{$value}' where id = '{$uid}'";
+		$sql = "update user set address = '{$address}' where id = '{$uid}'";
 		$conn->query($sql);
 
 
