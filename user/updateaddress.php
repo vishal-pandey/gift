@@ -17,18 +17,18 @@
 
 
 		// Return new token 
-		$sql = "select * from user where uid = '{$uid}'";
-		$result = $conn->query($sql);
-		$row = $result->fetch_assoc();
-		$key = "Vishalisgre8";
-		$token = array(
-				"id" => $row['id'],
-		    "name" => $row['name'],
-		    "email" => $row['email'],
-		    "address" =>$row['address'],
-		    "mobile" =>$row['mobile'],
-		);
-		$jwt = JWT::encode($token, $key);
-		echo '{ "key": "success","value": "'.$jwt.'" }';
+		// $sql = "select * from user where uid = '{$uid}'";
+		// $result = $conn->query($sql);
+		// $row = $result->fetch_assoc();
+		// $key = "Vishalisgre8";
+		// $token = array(
+		// 		"id" => $row['id'],
+		//     "name" => $row['name'],
+		//     "email" => $row['email'],
+		//     "address" =>$row['address'],
+		//     "mobile" =>$row['mobile'],
+		// );
+		// $jwt = JWT::encode($token, $key);
+		// echo '{ "key": "success","value": "'.$jwt.'" }';
 	}
 ?>
