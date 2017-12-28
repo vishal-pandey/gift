@@ -17,7 +17,8 @@
 		$odate = date("Y-m-d H:i:s");
 		$theorder = $obj->order;
 		$cost = $obj->cost;
-		$sql = "insert into orders values ('{$id}','{$uid}','{$odate}','{$theorder}','{$cost}')";
+		$address = $decoded->address;
+		$sql = "insert into orders values ('{$id}','{$uid}','{$odate}','{$theorder}','{$cost}', '{$address}')";
 		if($conn->query($sql)){
 			echo "success";
 		}
