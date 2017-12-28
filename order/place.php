@@ -8,6 +8,7 @@
 	$json = file_get_contents("php://input");
 	if ($json) {
 		$obj = json_decode($json);
+		print_r($obj);
 		$key = "Vishalisgre8";
 		$jwt = $obj->token;
 		$decoded = JWT::decode($jwt, $key, array('HS256'));
