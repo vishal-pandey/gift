@@ -29,7 +29,7 @@
 							"order": '.$order.',
 							"cost": '.$cost.',
 							"address": '.$address.'
-						}';
+						},';
 		}
 		echo "]";
 	}
