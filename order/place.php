@@ -22,7 +22,7 @@
 		echo $theorder;
 		$cost = $obj->cost;
 		echo $cost;
-		$sql = "insert into order values ('{$id}','{$uid}','{$odate}','{$theorder}','{$cost}')";
+		$sql = "insert into orders values ('{$id}','{$uid}','{$odate}','{$theorder}','{$cost}')";
 		echo $sql;
 		if($conn->query($sql)){
 			echo "success";
