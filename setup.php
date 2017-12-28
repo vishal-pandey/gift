@@ -9,6 +9,6 @@
 	$sql = "create table cart(id varchar(15), value text)";
 	// $conn->query($sql);
 
-	$sql = "create table order(id varchar(15) primary key, uid varchar(15), odate date, theorder text, cost varchar(10)";
+	$sql = "create table order(id varchar(15) primary key, uid varchar(15), odate date, theorder text, cost varchar(10))";
 	$conn->query($sql);
 ?>
