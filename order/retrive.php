@@ -24,11 +24,11 @@
 			$cost = $row['cost'];
 			$address = $row['address'];
 			echo '{
-							"oid": '.$oid.',
-							"date": '.$date.',
-							"order": '.$order.',
-							"cost": '.$cost.',
-							"address": '.$address.'
+							"oid": "'.$oid.'",
+							"date": "'.$date.'",
+							"order": "'.$order.'",
+							"cost": "'.$cost.'",
+							"address": "'.$address.'"
 						},';
 		}
 		echo "]";
