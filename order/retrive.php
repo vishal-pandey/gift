@@ -26,7 +26,7 @@
 			echo '{
 							"oid": "'.$oid.'",
 							"date": "'.$date.'",
-							"order": '.$order.',
+							"order" --: '.$order.',
 							"cost": "'.$cost.'",
 							"address": "'.$address.'"
 						},';
