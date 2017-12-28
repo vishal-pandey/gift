@@ -13,17 +13,11 @@
 		$decoded = JWT::decode($jwt, $key, array('HS256'));
 
 		$id = uniqid("o_");
-		echo $id;
 		$uid = $decoded->id;
-		echo $uid;
 		$odate = date("Y-m-d H:i:s");
-		echo $odate;
 		$theorder = $obj->order;
-		echo $theorder;
 		$cost = $obj->cost;
-		echo $cost;
 		$sql = "insert into orders values ('{$id}','{$uid}','{$odate}','{$theorder}','{$cost}')";
-		echo $sql;
 		if($conn->query($sql)){
 			echo "success";
 		}
