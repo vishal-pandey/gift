@@ -18,6 +18,7 @@
 		$theorder = $obj->order;
 		$cost = $obj->cost;
 		$sql = "insert into order values ('{$id}','{$uid}','{$odate}','{$theorder}','{$cost}')";
+		echo $sql;
 		if($conn->query($sql)){
 			echo "success";
 		}
