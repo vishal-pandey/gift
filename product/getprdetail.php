@@ -22,7 +22,6 @@
 		$sprice = $row['sprice'];
 		$description = $row['description'];
 		$qty = $row['qty'];
-		echo $pname;
 	
 		// echo "[";
 			echo '{
