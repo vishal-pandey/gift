@@ -1,7 +1,7 @@
 <?php
 	include '../config.php';
 
-	$sql = "select * from review where pid = '{$pid}' and status = 'w'";
+	$sql = "select * from category";
 	$result = $conn->query($sql);
 
 	echo "[";
