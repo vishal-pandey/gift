@@ -6,8 +6,14 @@
 	$json = file_get_contents("php://input");
 	if ($json) {
 		$obj = json_decode($json);
+
+		$cname = $obj->cname;
+
+		$sql = "select * from category where name = '{$cname}'";
+		$result = $conn->query($sql);
+		$row = $result->fetch_assoc();
 		
-		$cid = $obj->cid;
+		$cid = $row['id'];
 
 		$sql = "select * from product where cid = '{$cid}'";
 		$result = $conn->query($sql);
