@@ -8,12 +8,12 @@
 		$obj = json_decode($json);
 		
 		$id = uniqid("r_");
-		$pid = $decoded->pid;
+		$pid = $obj->pid;
 		$rdate = date("Y-m-d H:i:s");
-		$name = $decoded->name;
-		$email = $decoded->email;
-		$comment = $decoded->comment;
-		$rating = $decoded->rating;
+		$name = $obj->name;
+		$email = $obj->email;
+		$comment = $obj->comment;
+		$rating = $obj->rating;
 		$status = "w";
 
 		$sql = "insert into review values ('{$id}','{$pid}','{$rdate}','{$name}','{$name}','{$email}','{$comment}','{$rating}','{$status}')";
