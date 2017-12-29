@@ -23,7 +23,7 @@
 							"rdate": "'.$rdate.'",
 							"name": "'.$name.'",
 							"comment": "'.$comment.'",
-							"rating": "'.$rating.'",
+							"rating": "'.$rating.'"
 						},';
 		}
 		echo "{}]";
