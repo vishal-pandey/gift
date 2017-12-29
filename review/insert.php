@@ -18,8 +18,6 @@
 
 		$sql = "insert into review (id, pid, rdate, name, email, comment, rating, status) values ('{$id}','{$pid}','{$rdate}','{$name}','{$email}','{$comment}','{$rating}','{$status}')";
 
-		echo $sql;
-
 		if($conn->query($sql)){
 			echo "success";
 		}
