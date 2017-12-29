@@ -16,7 +16,7 @@
 		$rating = $obj->rating;
 		$status = "w";
 
-		$sql = "insert into review values ('{$id}','{$pid}','{$rdate}','{$name}','{$name}','{$email}','{$comment}','{$rating}','{$status}')";
+		$sql = "insert into review (id, pid, rdate, name, email, comment, rating, status) values ('{$id}','{$pid}','{$rdate}','{$name}','{$email}','{$comment}','{$rating}','{$status}')";
 
 		echo $sql;
 
