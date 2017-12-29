@@ -23,12 +23,14 @@
 			$order = $row['theorder'];
 			$cost = $row['cost'];
 			$address = $row['address'];
+			$status = $row['status'];
 			echo '{
 							"oid": "'.$oid.'",
 							"date": "'.$date.'",
 							"order" : '.$order.',
 							"cost": "'.$cost.'",
-							"address": "'.$address.'"
+							"address": "'.$address.'",
+							"status": "'.$status.'"
 						},';
 		}
 		echo "{}]";

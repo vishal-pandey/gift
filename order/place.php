@@ -18,7 +18,8 @@
 		$theorder = $obj->order;
 		$cost = $obj->cost;
 		$address = $decoded->address;
-		$sql = "insert into orders values ('{$id}','{$uid}','{$odate}','{$theorder}','{$cost}', '{$address}')";
+		$status = "Order Placed";
+		$sql = "insert into orders values ('{$id}','{$uid}','{$odate}','{$theorder}','{$cost}', '{$address}', '{$status}')";
 		if($conn->query($sql)){
 			echo "success";
 		}
