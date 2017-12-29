@@ -29,12 +29,12 @@
 			$qty = $row['qty'];
 	
 			echo '{
-							"pid": "'.$pid.'"
-							"cid": "'.$cid.'"
-							"name": "'.$name.'"
-							"price": "'.$price.'"
-							"sprice": "'.$sprice.'"
-							"description": "'.$description.'"
+							"pid": "'.$pid.'",
+							"cid": "'.$cid.'",
+							"name": "'.$name.'",
+							"price": "'.$price.'",
+							"sprice": "'.$sprice.'",
+							"description": "'.$description.'",
 							"qty": "'.$qty.'"
 						},';
 		}
