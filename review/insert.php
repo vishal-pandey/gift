@@ -17,6 +17,9 @@
 		$status = "w";
 
 		$sql = "insert into review values ('{$id}','{$pid}','{$rdate}','{$name}','{$name}','{$email}','{$comment}','{$rating}','{$status}')";
+
+		echo $sql;
+
 		if($conn->query($sql)){
 			echo "success";
 		}
