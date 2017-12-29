@@ -14,4 +14,15 @@
 
 	$sql = "create table review(id varchar(15), pid varchar(500), rdate datetime, name varchar(500), email varchar(500), comment text, rating int(5), status varchar(50))";
 	$conn->query($sql);
+
+
+
+	// Category and Product setup
+	$sql = "create table category(id varchar(15), name varchar(800))";
+	$conn->query($sql);
+
+	$sql = "create table product(id varchar(15), cid varchar(15), name varchar(800), price int(6), sprice int(6), desc text, qty int(6), varient text)";
+	$conn->query($sql);
+	
+
 ?>
