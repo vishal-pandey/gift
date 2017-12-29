@@ -20,10 +20,10 @@
 			$comment = $row['comment'];
 			$rating = $row['rating'];
 			echo '{
-							"rdate": "{$rdate}",
-							"name": "{$name}",
-							"comment": "{$comment}",
-							"rating": "{$rating}",
+							"rdate": "'.$rdate}.'",
+							"name": "'.$name.'",
+							"comment": "'.$comment.'",
+							"rating": "'.$rating.'",
 						},';
 		}
 		echo "{}]";
