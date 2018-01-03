@@ -9,7 +9,7 @@
 
 		$cid = $obj->cid;
 
-		$sql = "select * from category where id = {$cid}";
+		$sql = "select * from category where id = '{$cid}'";
 		$result = $conn->query($sql);
 
 		$row = $result->fetch_assoc();
