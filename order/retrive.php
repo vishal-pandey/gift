@@ -14,7 +14,7 @@
 
 		$uid = $decoded->id;
 		
-		$sql = "select * from orders where uid = '{$uid}'";
+		$sql = "select * from orders where uid = '{$uid}' order by date desc";
 		$result = $conn->query($sql);
 		echo "[";
 		while ($row = $result->fetch_assoc()) {
