@@ -12,16 +12,8 @@
 		$sql = "select * from category where id = {$cid}";
 		$result = $conn->query($sql);
 
-		echo "[";
-			while($row = $result->fetch_assoc()){
-				$id = $row['id'];
-				$name = $row['name'];
-				echo '{
-								"id": "'.$id.'",
-								"name": "'.$name.'"
-							},';
-			}
-		echo "{}]";
+		$row = $result->fetch_assoc();
+		echo $row['name'];
 
 		// $sql = "insert into review (id, pid, rdate, name, email, comment, rating, status) values ('{$id}','{$pid}','{$rdate}','{$name}','{$email}','{$comment}','{$rating}','{$status}')";
 
