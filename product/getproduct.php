@@ -8,10 +8,10 @@
 		$obj = json_decode($json);
 
 		$cid = $obj->cid;
-		echo $cid;
+		// echo $cid;
 		$sql = "select * from category where id = '{$cid}'";
 		$result = $conn->query($sql);
-		echo $sql;
+		// echo $sql;
 		$row = $result->fetch_assoc();
 		echo $row['name'];
 
