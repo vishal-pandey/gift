@@ -8,7 +8,7 @@
 		$obj = json_decode($json);
 
 		$cid = $obj->cid;
-
+		echo $cid;
 		$sql = "select * from category where id = '{$cid}'";
 		$result = $conn->query($sql);
 		echo $sql;
